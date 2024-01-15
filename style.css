@@ -1,11 +1,10 @@
-  ul {
+.list{
     list-style-type: none;
     padding-left: 20px;
     padding-top: 5px;
-    padding-bottom: 5px;
   }
 
-  ul li {
+.ulist li {
     /* background: #cce5ff; */
     color: darkblue;
     margin: 5px;
@@ -20,3 +19,4 @@
     background: #e6c1f7;
     padding: 20px;
 }
+
