@@ -12,44 +12,44 @@
 
     <!-- +++++++++NAVIGATION+++++++++ -->
     <ul class="nav">
-        <li class="navlist" ><a href="index.html">Home</a></li>
-        <li class="navlist" ><a class="active" href="browser.html">Browser</a></li>
-        <li class="navlist" ><a href="course.html">Course</a></li>
-        <li class="navlist" ><a href="about.html">About</a></li>
-      </ul>
-     <!-- +++++++++NAVIGATION+++++++++ -->
+        <li class="navlist"><a href="index.html">Home</a></li>
+        <li class="navlist"><a class="active" href="browser.html">Browser</a></li>
+        <li class="navlist"><a href="course.html">Course</a></li>
+        <li class="navlist"><a href="about.html">About</a></li>
+    </ul>
+    <!-- +++++++++NAVIGATION+++++++++ -->
 
-     <style>
+    <style>
         .browser {
             font-size: 15px;
             line-height: 30px;
             font-family: Arial, Helvetica, sans-serif;
             padding-left: 20px
         }
-        </style>
+    </style>
 
 
-     <p class= "browser" id="navigator"></p>
-     <p class= "browser" id="product"></p>
-     <p class= "browser" id="appversion"></p>
-     <p class= "browser" id="userAgent"></p>
-     <p class= "browser" id="platform"></p>
-     <p class= "browser" id="language"></p>
-     <p class= "browser" id="width"></p>
-     <p class= "browser" id="screen"></p>
-     <p class= "browser" id="height"></p>
-     <p class= "browser" id="availwidth"></p>
-     <p class= "browser" id="availheight"></p>
-     <p class= "browser" id="colordepth"></p>
-     <p class= "browser" id="pixeldepth"></p>
-     <p class= "browser" id="location"></p>
-     <p>Click the button to get your coordinates.</p>
+    <p class="browser" id="navigator"></p>
+    <p class="browser" id="product"></p>
+    <p class="browser" id="appversion"></p>
+    <p class="browser" id="userAgent"></p>
+    <p class="browser" id="platform"></p>
+    <p class="browser" id="language"></p><br>
+    <p class="browser" id="width"></p>
+    <p class="browser" id="screen"></p>
+    <p class="browser" id="height"></p>
+    <p class="browser" id="availwidth"></p>
+    <p class="browser" id="availheight"></p>
+    <p class="browser" id="colordepth"></p>
+    <p class="browser" id="pixeldepth"></p><br>
+    <p class="browser" id="location"></p>
+    <p>Click the button to get your coordinates.</p>
 
-<button onclick="getLocation()">Try It</button>
+    <button onclick="getLocation()">Try It</button>
 
-<p id="geolocation"></p>
+    <p id="geolocation"></p><br><br>
 
-     <script>
+    <script>
         document.getElementById("navigator").innerHTML = "navigator.appName is " + navigator.appName;
         document.getElementById("product").innerHTML = "navigator.product is " + navigator.product;
         document.getElementById("appversion").innerHTML = "appVersion: " + navigator.appVersion;
@@ -59,33 +59,33 @@
 
 
         document.getElementById("width").innerHTML =
-        "Browser inner window width: " + window.innerWidth + "px<br>" +
-        "Browser inner window height: " + window.innerHeight + "px";
+            "Browser inner window width: " + window.innerWidth + "px<br>" +
+            "Browser inner window height: " + window.innerHeight + "px";
 
         document.getElementById("screen").innerHTML = "Screen width is " + screen.width;
         document.getElementById("height").innerHTML = "Screen Height: " + screen.height;
         document.getElementById("availwidth").innerHTML = "Available Screen Width: " + screen.availWidth;
         document.getElementById("availheight").innerHTML = "Available Screen Height: " + screen.availHeight;
         document.getElementById("colordepth").innerHTML = "Screen Color Depth: " + screen.colorDepth;
-        document.getElementById("pixeldepth").innerHTML ="Screen Pixel Depth: " + screen.pixelDepth;
+        document.getElementById("pixeldepth").innerHTML = "Screen Pixel Depth: " + screen.pixelDepth;
 
         document.getElementById("location").innerHTML = "The full URL of this page is:<br>" + window.location.href;
 
         const x = document.getElementById("geolocation");
 
         function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
         }
 
         function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude + 
-        "<br>Longitude: " + position.coords.longitude;
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
         }
-        </script>
-    </body>
+    </script>
+</body>
 
-    </html>
+</html>
