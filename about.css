@@ -20,13 +20,13 @@
 
 .flex-item {
     font-family: Arial, Helvetica, sans-serif;
-    background: tomato;
+    /* background: tomato; */
     padding: 5px;
     width: 300px;
-    height: 350px;
+    height: 450px;
     margin-top: 10px;
     /* line-height: 150px; */
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 2em;
     text-align: left;
@@ -34,6 +34,7 @@
 
 .small-text {
     font-size: 14px;
+    line-height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-align: left;
