@@ -18,7 +18,55 @@
         <li class="navlist" ><a href="about.html">About</a></li>
       </ul>
      <!-- +++++++++NAVIGATION+++++++++ -->
+     <p id="navigator"></p>
+     <p id="product"></p>
+     <p id="appversion"></p>
+     <p id="userAgent"></p>
+     <p id="platform"></p>
+     <p id="language"></p>
+     <p id="width"></p>
+     <p id="screen"></p>
+     <p id="location"></p>
+     <p>Click the button to get your coordinates.</p>
 
+<button onclick="getLocation()">Try It</button>
+
+<p id="geolocation"></p>
+
+     <script>
+        document.getElementById("navigator").innerHTML = "navigator.appName is " + navigator.appName;
+        document.getElementById("product").innerHTML = "navigator.product is " + navigator.product;
+        document.getElementById("appversion").innerHTML = "appVersion: " + navigator.appVersion;
+        document.getElementById("userAgent").innerHTML = "userAgent: " + navigator.userAgent;
+        document.getElementById("platform").innerHTML = "platform: " + navigator.platform;
+        document.getElementById("language").innerHTML = "language: " + navigator.language;
+
+
+        document.getElementById("width").innerHTML =
+        "Browser inner window width: " + window.innerWidth + "px<br>" +
+        "Browser inner window height: " + window.innerHeight + "px";
+
+        document.getElementById("screen").innerHTML = 
+        "Screen width is " + screen.width;
+
+        document.getElementById("location").innerHTML = 
+        "The full URL of this page is:<br>" + window.location.href;
+
+        const x = document.getElementById("geolocation");
+
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        }
+
+        function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
     </body>
 
     </html>
