@@ -13,15 +13,18 @@
 
 .top {
     font-family: Arial, Helvetica, sans-serif;
-    background: #c2dbf5;
+    /* background: #c2dbf5; */
     padding: 20px;
 }
 
 .bottom{
     font-family: Arial, Helvetica, sans-serif;
-    background: #e6c1f7;
+    /* background: #e6c1f7; */
     padding: 20px;
 }
 h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
     font-family: Arial, Helvetica, sans-serif;
 }
